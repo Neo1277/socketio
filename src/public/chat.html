@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Chat socket</title>
+</head>
+
+<body>
+    <nav class="navbar navbar">
+        <a href="/" class="navbar-brand white-c">CHAT SOCKET</a>
+    </nav>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-sm-12 text-center">
+                <h4>
+                    Usuarios activos:
+                </h4>
+                <h4 id="users">
+                    0
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3> MESA 1/2</h3>
+                        <button class="btn btn-primary">
+                            ENTRAR
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3> MESA 2/2</h3>
+                        <button class="btn btn-primary">
+                            ENTRAR
+                        </button>
+                    </div>
+                </div>
+            </div>    
+            <div class="col-sm-4 text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container">
+                            <p class="text-left chat-global" id="user"></p>
+                            <div class="input-group-append">
+                                <input type="text" class="form-control" placeholder="Write a message" id="message">
+                                <button class="btn btn-success" id="send">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>    
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+
+</html>

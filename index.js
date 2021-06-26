@@ -8,6 +8,12 @@ app.set('port', process.env.PORT || 4001);
 //Static files
 app.use(express.static(path.join(__dirname, 'src', 'public'))); 
 
+app.post("/", function(req, res) {
+  var nickname = req.body.user.nickname;
+   
+  console.log('nickname: ', nickname);
+});
+
 //Start server
 const server = app.listen(app.get('port'), () => {
     console.log('server on port', app.get('port'));
